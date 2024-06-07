@@ -6,7 +6,9 @@ This PoC demonstrates the following architecture, design, and coding strategies:
 
 1. Spring 3.2 with Java 21 and GraalVM
 2. Spring docker and dev tools
-3. Building native executables and docker images
+   * Required docker containers created on application startup
+   * Write code at runtime and dynamically load into the jvm.
+4. Building native executables and docker images
 
 ### Building and Running the application
 
