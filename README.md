@@ -1,4 +1,29 @@
-# Getting Started
+# spring3 native example
+
+### Overview
+
+This PoC demonstrates the following architecture, design, and coding strategies:
+
+1. Spring 3.2 with Java 21 and GraalVM
+2. Spring docker and dev tools
+3. Building native executables and docker images
+
+### Building and Running the application
+
+#### Download and install GraalVM jdk 21
+* Follow [GraalVM installation instructions](https://www.graalvm.org/latest/docs/getting-started/macos/)
+
+#### Running the Application
+* Execute `./gradlew bootRun` to spin up the needed docker containers and start the spring boot application.
+* Navigate to [http://localhost:8080/hello](http://localhost:8080/hello) to verify taht everything is working.
+
+#### Running the Native Application
+* Execute `docker compose up -d` to spin up needed PostGres database.
+* Execute `./gradlew nativeRun` to generate a native executable version of the application and launch it.
+
+#### Running the Application in a Docker Container
+* Execute `./gradlew bootBuildImage` to generate an optimized docker image.
+* Uncomment lines in `compose.yanl` and run `docker compose up -d`.
 
 ### Reference Documentation
 For further reference, please consider the following sections:
